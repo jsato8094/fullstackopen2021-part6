@@ -17,10 +17,11 @@ const asObject = (anecdote) => {
   }
 }
 
-export const vote = (id) => {
+export const vote = (id, content) => {
   return {
     type: 'VOTE',
-    id: id
+    id: id,
+    content: content
   }
 }
 
