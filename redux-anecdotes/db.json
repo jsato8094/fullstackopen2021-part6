@@ -2,7 +2,7 @@
   "anecdotes": [
     {
       "content": "If it hurts, do it more often",
-      "votes": 5,
+      "votes": 6,
       "id": "47145"
     },
     {
@@ -32,12 +32,17 @@
     },
     {
       "content": "this is new anec",
-      "id": "19888",
-      "votes": 0
+      "votes": 1,
+      "id": "19888"
     },
     {
       "content": "this is also new anec!!!",
       "id": "30246",
+      "votes": 0
+    },
+    {
+      "content": "nido aru koto ha sanndo aru",
+      "id": "87033",
       "votes": 0
     }
   ]
