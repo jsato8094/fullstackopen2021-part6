@@ -26,9 +26,12 @@ export const createNew = (content) => {
 }
 
 export const initialize = (data) => {
-  return {
-    type: 'INIT',
-    data: data
+  return async dispatch => {
+    const data = await anecdoteService.getAll()
+    dispatch({
+      type: 'INIT',
+      data: data
+    })
   }
 }
 
