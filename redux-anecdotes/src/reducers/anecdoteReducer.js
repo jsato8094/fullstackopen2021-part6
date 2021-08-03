@@ -1,3 +1,5 @@
+import anecdoteService from "../services/anecdotes"
+
 const getId = () => (100000 * Math.random()).toFixed(0)
 
 const asObject = (anecdote) => {
@@ -40,6 +42,7 @@ const reducer = (state = [], action) => {
       return newState.map(obj => obj.id === action.id ? {...obj, votes: obj.votes + 1} : obj)
     case 'CREATE':
       const newAnec = asObject(action.content)
+      anecdoteService.post(newAnec)
       return [...state, newAnec]
     case 'INIT':
       return action.data
