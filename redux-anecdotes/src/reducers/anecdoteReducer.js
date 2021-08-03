@@ -19,9 +19,13 @@ export const vote = (id, content) => {
 }
 
 export const createNew = (content) => {
-  return {
-    type: 'CREATE',
-    content: content
+  return async dispatch => {
+    const newAnec = await anecdoteService.post(asObject(content))
+    dispatch({
+      type: 'CREATE',
+      content: content,
+      obj: newAnec
+    })
   }
 }
 
@@ -44,9 +48,7 @@ const reducer = (state = [], action) => {
       const newState = [...state]
       return newState.map(obj => obj.id === action.id ? {...obj, votes: obj.votes + 1} : obj)
     case 'CREATE':
-      const newAnec = asObject(action.content)
-      anecdoteService.post(newAnec)
-      return [...state, newAnec]
+      return [...state, action.obj]
     case 'INIT':
       return action.data
     default:
