@@ -11,10 +11,15 @@ const asObject = (anecdote) => {
 }
 
 export const vote = (id, content) => {
-  return {
-    type: 'VOTE',
-    id: id,
-    content: content
+  return async dispatch => {
+    const objToVote = await anecdoteService.get(id)
+    const voted = {...objToVote, votes: objToVote.votes + 1}
+    await anecdoteService.put(voted)
+    dispatch({
+      type: 'VOTE',
+      id: id,
+      content: content
+    })
   }
 }
 
