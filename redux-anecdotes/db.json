@@ -2,12 +2,12 @@
   "anecdotes": [
     {
       "content": "If it hurts, do it more often",
-      "votes": 6,
+      "votes": 7,
       "id": "47145"
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
-      "votes": 1,
+      "votes": 2,
       "id": "21149"
     },
     {
@@ -32,13 +32,13 @@
     },
     {
       "content": "this is new anec",
-      "votes": 1,
+      "votes": 2,
       "id": "19888"
     },
     {
       "content": "this is also new anec!!!",
-      "id": "30246",
-      "votes": 0
+      "votes": 1,
+      "id": "30246"
     },
     {
       "content": "nido aru koto ha sanndo aru",
