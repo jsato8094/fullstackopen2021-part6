@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 const Notification = (props) => {
   const notification = props.notification
-  if (notification == null) {
+  if (notification.message == null) {
     return <div />
   }
   const style = {
@@ -13,7 +13,7 @@ const Notification = (props) => {
   }
   return (
     <div style={style}>
-      {notification}
+      {notification.message}
     </div>
   )
 }
